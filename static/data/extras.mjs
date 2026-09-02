@@ -410,7 +410,7 @@ export const LEGAL = {
   },
   terms: {
     en: { title: 'Terms — Knee Battle', h1: 'Terms of use.', lede: 'Plain language, because legal fog helps nobody.', body: [
-      ['What this is', 'A free educational and spiritual-formation resource published by Comunidade Brasileira Inc (CBA Orlando), a 501(c)(3) nonprofit in Orlando, Florida.'],
+      ['What this is', 'A free educational and spiritual-formation resource published by Comunidade Brasileira Inc (CBA Orlando), in Orlando, Florida.'],
       ['What this is not', 'It is not psychotherapy, clinical counselling, medical advice, legal advice, financial advice, or emergency care, and it does not create a professional relationship of any kind. Do not delay seeking professional help because of anything you read here.'],
       ['No guarantees of outcome', 'We make no promise, express or implied, that prayer performed in any manner described here will produce any particular result in your health, relationships, finances, or circumstances.'],
       ['Safety', 'If you are in danger, call emergency services. Nothing on this site should be read as advice to remain in an unsafe home or relationship.'],
@@ -419,7 +419,7 @@ export const LEGAL = {
       ['Changes', 'We may update this site and these terms at any time. Continued use means acceptance of the current version.'],
     ] },
     pt: { title: 'Termos — Knee Battle', h1: 'Termos de uso.', lede: 'Linguagem simples, porque névoa jurídica não ajuda ninguém.', body: [
-      ['O que isto é', 'Um recurso educacional e de formação espiritual gratuito publicado pela Comunidade Brasileira Inc (CBA Orlando), uma organização 501(c)(3) em Orlando, Flórida.'],
+      ['O que isto é', 'Um recurso educacional e de formação espiritual gratuito publicado pela Comunidade Brasileira Inc (CBA Orlando), em Orlando, Flórida.'],
       ['O que isto não é', 'Não é psicoterapia, aconselhamento clínico, orientação médica, jurídica ou financeira, nem atendimento de emergência, e não cria nenhuma relação profissional. Não adie procurar ajuda profissional por causa de algo que leu aqui.'],
       ['Sem garantia de resultados', 'Não fazemos nenhuma promessa, expressa ou implícita, de que a oração feita de qualquer forma descrita aqui produzirá qualquer resultado específico na sua saúde, relacionamentos, finanças ou circunstâncias.'],
       ['Segurança', 'Se você está em perigo, ligue para os serviços de emergência. Nada neste site deve ser lido como conselho para permanecer numa casa ou relação insegura.'],
@@ -428,7 +428,7 @@ export const LEGAL = {
       ['Alterações', 'Podemos atualizar este site e estes termos a qualquer momento. O uso continuado significa aceitação da versão atual.'],
     ] },
     es: { title: 'Términos — Knee Battle', h1: 'Términos de uso.', lede: 'Lenguaje sencillo, porque la niebla legal no ayuda a nadie.', body: [
-      ['Qué es esto', 'Un recurso educativo y de formación espiritual gratuito publicado por Comunidade Brasileira Inc (CBA Orlando), una organización 501(c)(3) en Orlando, Florida.'],
+      ['Qué es esto', 'Un recurso educativo y de formación espiritual gratuito publicado por Comunidade Brasileira Inc (CBA Orlando), en Orlando, Florida.'],
       ['Qué no es esto', 'No es psicoterapia, consejería clínica, consejo médico, legal o financiero, ni atención de emergencia, y no crea ninguna relación profesional. No retrases buscar ayuda profesional por algo que leas aquí.'],
       ['Sin garantías de resultado', 'No hacemos ninguna promesa, expresa o implícita, de que la oración realizada de cualquier manera descrita aquí producirá un resultado particular en tu salud, relaciones, finanzas o circunstancias.'],
       ['Seguridad', 'Si estás en peligro, llama a los servicios de emergencia. Nada en este sitio debe leerse como consejo de permanecer en un hogar o relación insegura.'],
@@ -441,19 +441,19 @@ export const LEGAL = {
     en: { title: 'Contact — Knee Battle', h1: 'Talk to a real person.', lede: 'No campaign, no automated sequence, no obligation. A person at CBA Orlando reads what you send and answers.', body: [
       ['Email', 'info@cbaorlando.org — questions, prayer requests, corrections, disagreements, or a request for someone to walk with you.'],
       ['Phone', '321-689-2973'],
-      ['Where we are', 'Orlando, Florida. Comunidade Brasileira Inc is a registered 501(c)(3) nonprofit.'],
+      ['Where we are', 'Orlando, Florida. Published by Comunidade Brasileira Inc (CBA Orlando).'],
       ['If you need help now', 'Call 911 in an emergency. In the US, call or text 988 for suicide or mental-health crisis support. Please do not wait for an email reply if you are in danger.'],
     ] },
     pt: { title: 'Contato — Knee Battle', h1: 'Fale com uma pessoa de verdade.', lede: 'Sem campanha, sem sequência automática, sem obrigação. Uma pessoa da CBA Orlando lê o que você envia e responde.', body: [
       ['E-mail', 'info@cbaorlando.org — perguntas, pedidos de oração, correções, discordâncias ou um pedido para alguém caminhar com você.'],
       ['Telefone', '321-689-2973'],
-      ['Onde estamos', 'Orlando, Flórida. Comunidade Brasileira Inc é uma organização 501(c)(3) registrada.'],
+      ['Onde estamos', 'Orlando, Flórida. Publicado pela Comunidade Brasileira Inc (CBA Orlando).'],
       ['Se você precisa de ajuda agora', 'Ligue 190 em emergências. No Brasil, ligue 188 (CVV) para apoio em crise emocional. Por favor, não espere uma resposta de e-mail se você está em perigo.'],
     ] },
     es: { title: 'Contacto — Knee Battle', h1: 'Habla con una persona real.', lede: 'Sin campaña, sin secuencia automática, sin obligación. Una persona de CBA Orlando lee lo que envías y responde.', body: [
       ['Correo', 'info@cbaorlando.org — preguntas, peticiones de oración, correcciones, desacuerdos o una solicitud para que alguien camine contigo.'],
       ['Teléfono', '321-689-2973'],
-      ['Dónde estamos', 'Orlando, Florida. Comunidade Brasileira Inc es una organización 501(c)(3) registrada.'],
+      ['Dónde estamos', 'Orlando, Florida. Publicado por Comunidade Brasileira Inc (CBA Orlando).'],
       ['Si necesitas ayuda ahora', 'Llama al 911 en una emergencia. En EE. UU., llama o envía un mensaje al 988 para apoyo en crisis de salud mental. Por favor no esperes una respuesta por correo si estás en peligro.'],
     ] },
   },

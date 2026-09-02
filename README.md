@@ -93,5 +93,4 @@ Productions, Provident Films, Affirm Films, TriStar Pictures, or Sony Pictures R
 
 ---
 
-Published by **Comunidade Brasileira Inc** (CBA Orlando), a registered 501(c)(3) nonprofit,
-EIN 20-5148631 · Orlando, Florida · info@cbaorlando.org · 321-689-2973
+Published by **Comunidade Brasileira Inc** (CBA Orlando) · Orlando, Florida · info@cbaorlando.org · 321-689-2973

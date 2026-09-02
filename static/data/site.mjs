@@ -22,18 +22,28 @@ export const ANCHOR_VERSE = {
   es: { t: 'Mas tú, cuando ores, entra en tu aposento, y cerrada la puerta, ora a tu Padre que está en secreto; y tu Padre que ve en lo secreto te recompensará.', r: 'Mateo 6:6 (RVR1909)' },
 };
 
-/* ---------- family bar: 9 doors, includes self ---------- */
+/* ---------- family bar: 10 doors, CBA canonical order, CURRENT=knee rendered as span ----------
+   Order fixed across all family sites: CBA first (the house), then the doors.
+   Labels match CBA _build/site.mjs FAMILY link labels exactly. */
 export const FAMILY = [
-  { url: 'https://cbaorlando.org', dot: '#1FA15B', en: 'Community', pt: 'Comunidade', es: 'Comunidad' },
-  { url: 'https://praythenact.com', dot: '#F2624C', en: 'Daily Devotional', pt: 'Devocional', es: 'Devocional' },
-  { url: 'https://bygodscall.com', dot: '#F4A72C', en: 'Daily Audio', pt: 'Áudio diário', es: 'Audio diario' },
-  { url: 'https://www.discoveringjesustogether.com', dot: '#7A5AF0', en: 'Bible Study', pt: 'Estudo bíblico', es: 'Estudio bíblico' },
-  { url: 'https://tothewaters.com', dot: '#16B5C4', en: 'Baptism', pt: 'Batismo', es: 'Bautismo' },
-  { url: 'https://pridedestroy.com', dot: '#8b0000', en: 'Pride Destroy', pt: 'Pride Destroy', es: 'Pride Destroy' },
-  { url: 'https://sabbathschool.us', dot: '#2f6bd7', en: 'Sabbath School', pt: 'Escola Sabatina', es: 'Escuela Sabática' },
-  { url: 'https://committedinchrist.com', dot: '#c2255c', en: 'Marriage Program', pt: 'Programa para Casais', es: 'Programa para Matrimonios' },
-  { url: 'https://kneebattle.com', dot: '#2E1F6B', en: 'Prayer Strategy', pt: 'Batalha de Joelhos', es: 'Batalla de Rodillas' },
+  { id: 'cba', url: 'https://cbaorlando.org', dot: '#1FA15B', en: 'CBA Orlando', pt: 'CBA Orlando', es: 'CBA Orlando' },
+  { id: 'praythenact', url: 'https://praythenact.com', dot: '#F2624C', en: 'Daily Devotional', pt: 'Devocional diário', es: 'Devocional diario' },
+  { id: 'godscall', url: 'https://bygodscall.com', dot: '#F4A72C', en: 'Daily Audio', pt: 'Áudio diário', es: 'Audio diario' },
+  { id: 'discoveringjesus', url: 'https://www.discoveringjesustogether.com', dot: '#7A5AF0', en: 'Bible Study', pt: 'Estudo bíblico', es: 'Estudio bíblico' },
+  { id: 'tothewaters', url: 'https://tothewaters.com', dot: '#16B5C4', en: 'Baptism', pt: 'Batismo', es: 'Bautismo' },
+  { id: 'pride', url: 'https://pridedestroy.com', dot: '#8b0000', en: 'Pride Destroy', pt: 'Pride Destroy', es: 'Pride Destroy' },
+  { id: 'sabbath', url: 'https://sabbathschool.us', dot: '#2f6bd7', en: 'Sabbath School', pt: 'Escola Sabatina', es: 'Escuela Sabática' },
+  { id: 'committed', url: 'https://committedinchrist.com', dot: '#c2255c', en: 'Marriage Program', pt: 'Programa para Casais', es: 'Programa para Matrimonios' },
+  { id: 'knee', url: 'https://kneebattle.com', dot: '#2E1F6B', en: 'Prayer Strategy', pt: 'Batalha de Joelhos', es: 'Batalla de Rodillas' },
+  { id: 'legado', url: 'https://meulegado.us', dot: '#8C5A2B', en: 'Legacy', pt: 'Legado', es: 'Legado' },
 ];
+export const FAMILY_CURRENT = 'knee';
+
+export const FAMILY_INTRO = {
+  en: 'One house, many doors. Every ministry below is part of the same family — walk through whichever one you need today.',
+  pt: 'Uma casa, muitas portas. Cada ministério abaixo faz parte da mesma família — entre por aquela que você precisa hoje.',
+  es: 'Una casa, muchas puertas. Cada ministerio abajo es parte de la misma familia — entra por la que necesites hoy.',
+};
 
 export const CBA_MARK = '<svg class="cba-mark" width="22" height="22" viewBox="0 0 32 32" role="img" aria-label="CBA Orlando"><rect width="32" height="32" rx="8" fill="#1FA15B"/><path d="M16 6v9M11.5 10.5h9" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/><path d="M7 23q3 -3 6 0t6 0" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/></svg>';
 
@@ -56,7 +66,7 @@ export const UI = {
   topbarCrisis: { en: 'Need help right now?', pt: 'Precisa de ajuda agora?', es: '¿Necesitas ayuda ahora?' },
   menu: { en: 'Menu', pt: 'Menu', es: 'Menú' },
   skip: { en: 'Skip to content', pt: 'Ir para o conteúdo', es: 'Ir al contenido' },
-  familyEyebrow: { en: 'Explore the family', pt: 'Explore a família', es: 'Explora la familia' },
+  familyEyebrow: { en: 'Explore the family', pt: 'Conheça o ministério', es: 'Conoce el ministerio' },
   home: { en: 'Home', pt: 'Início', es: 'Inicio' },
   langLabel: { en: 'Language', pt: 'Idioma', es: 'Idioma' },
   colophon: { en: 'A ministry of', pt: 'Um ministério da', es: 'Un ministerio de' },
@@ -70,19 +80,19 @@ export const FOOT_COLS = {
     { h: 'Begin', l: [['start-here', 'Start Here'], ['prayer-room', 'Build Your Prayer Room'], ['how-to-pray', "When You Don't Know How"], ['gospel', 'Meet Jesus']] },
     { h: 'Fight', l: [['battle-plan', 'The Ten Fronts'], ['31-days', '31-Day Knee Battle'], ['cards', 'Prayer Card Builder'], ['fasting', 'Fasting & Prayer']] },
     { h: 'For someone you love', l: [['marriage', 'Marriage'], ['children', 'Children'], ['fear', 'Fear'], ['provision', 'Money & Work']] },
-    { h: 'Ministry', l: [['about', 'About & Safety'], ['testimonies', 'Testimonies'], ['mentor', "Be Someone's Miss Clara"], ['contact', 'Contact']] },
+    { h: 'Ministry', l: [['about', 'About & Safety'], ['testimonies', 'Testimonies'], ['mentor', "Be Someone's Miss Clara"], ['inspired-by', 'Where the idea came from']] },
   ],
   pt: [
     { h: 'Comece', l: [['start-here', 'Comece Aqui'], ['prayer-room', 'Monte sua Sala de Oração'], ['how-to-pray', 'Quando você não sabe orar'], ['gospel', 'Conheça Jesus']] },
     { h: 'Lute', l: [['battle-plan', 'As Dez Frentes'], ['31-days', 'Batalha de 31 Dias'], ['cards', 'Cartões de Oração'], ['fasting', 'Jejum e Oração']] },
     { h: 'Por quem você ama', l: [['marriage', 'Casamento'], ['children', 'Filhos'], ['fear', 'Medo'], ['provision', 'Dinheiro e Trabalho']] },
-    { h: 'Ministério', l: [['about', 'Sobre e Segurança'], ['testimonies', 'Testemunhos'], ['mentor', 'Seja a Miss Clara de alguém'], ['contact', 'Contato']] },
+    { h: 'Ministério', l: [['about', 'Sobre e Segurança'], ['testimonies', 'Testemunhos'], ['mentor', 'Seja a Miss Clara de alguém'], ['inspired-by', 'De onde veio a ideia']] },
   ],
   es: [
     { h: 'Comienza', l: [['start-here', 'Empieza Aquí'], ['prayer-room', 'Arma tu Sala de Oración'], ['how-to-pray', 'Cuando no sabes orar'], ['gospel', 'Conoce a Jesús']] },
     { h: 'Pelea', l: [['battle-plan', 'Los Diez Frentes'], ['31-days', 'Batalla de 31 Días'], ['cards', 'Tarjetas de Oración'], ['fasting', 'Ayuno y Oración']] },
     { h: 'Por quien amas', l: [['marriage', 'Matrimonio'], ['children', 'Hijos'], ['fear', 'Miedo'], ['provision', 'Dinero y Trabajo']] },
-    { h: 'Ministerio', l: [['about', 'Acerca y Seguridad'], ['testimonies', 'Testimonios'], ['mentor', 'Sé la Miss Clara de alguien'], ['contact', 'Contacto']] },
+    { h: 'Ministerio', l: [['about', 'Acerca y Seguridad'], ['testimonies', 'Testimonios'], ['mentor', 'Sé la Miss Clara de alguien'], ['inspired-by', 'De dónde vino la idea']] },
   ],
 };
 
@@ -99,9 +109,9 @@ export const CRISIS_STRIP = {
 };
 
 export const FAMILY_LEGAL = {
-  en: 'Part of the CBA Orlando family · Comunidade Brasileira Inc is a registered 501(c)(3) nonprofit · Orlando, FL · info@cbaorlando.org',
-  pt: 'Parte da família CBA Orlando · Comunidade Brasileira Inc é uma organização sem fins lucrativos 501(c)(3) registrada · Orlando, FL · info@cbaorlando.org',
-  es: 'Parte de la familia CBA Orlando · Comunidade Brasileira Inc es una organización sin fines de lucro 501(c)(3) registrada · Orlando, FL · info@cbaorlando.org',
+  en: 'Part of the CBA Orlando family · Comunidade Brasileira Inc · Orlando, FL · info@cbaorlando.org',
+  pt: 'Parte da família CBA Orlando · Comunidade Brasileira Inc · Orlando, FL · info@cbaorlando.org',
+  es: 'Parte de la familia CBA Orlando · Comunidade Brasileira Inc · Orlando, FL · info@cbaorlando.org',
 };
 
 export const INDEPENDENCE = {

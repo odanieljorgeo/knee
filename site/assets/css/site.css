@@ -9,9 +9,10 @@
   --soft2: #efedf9;
   --ink: #171528;
   --ink-mute: #4a4763;
-  --ink-faint: #77738f;
+  --ink-faint: #625e7c;
   --line: #e6e4f0;
   --line-strong: #d6d2e8;
+  --ink-soft: #4a4763;
 
   --indigo: #2E1F6B;
   --indigo-deep: #221650;
@@ -19,7 +20,7 @@
   --night: #120e2e;
 
   --gold: #F0B429;
-  --gold-deep: #c9920f;
+  --gold-deep: #8a6400;
   --gold-soft: #fff6e2;
 
   --danger: #c0392b;
@@ -241,11 +242,20 @@ section { scroll-margin-top:84px; }
 .front-q { background:var(--soft); border-radius:var(--radius); padding:20px 24px; margin:22px 0; }
 .front-q p { margin:0; font-weight:600; }
 
-/* ---------- family bar ---------- */
-.cba-family-bar { display:flex; flex-wrap:wrap; align-items:center; gap:6px 18px; padding:16px 24px; background:var(--night); border-top:1px solid rgba(255,255,255,.08); font-size:13.5px; justify-content:center; }
-.cba-family-bar a { color:#cfc9ea; display:inline-flex; align-items:center; gap:7px; }
-.cba-family-bar a:hover { color:#fff; text-decoration:none; }
-.cba-family-eyebrow { color:#8a83ad; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; margin-right:6px; }
+/* ---------- family bar: CANONICAL 10-door grid (5 + 5, centered, light) ----------
+   Ported from CBA Orlando cba-redesign.css. Copy-standard across the family. */
+.cba-family-bar { background:var(--soft); border-top:1px solid var(--line); padding:clamp(2.4rem,4vw,3.4rem) 0 clamp(2.2rem,4vw,3rem); }
+.cba-family-bar .family-wrap { border-top:none; padding-top:0; padding-bottom:0; }
+.cba-family-bar .family-head { text-align:center; max-width:62ch; margin:0 auto clamp(1.5rem,3vw,2.1rem); }
+.cba-family-bar .cba-family-eyebrow { display:block; font-weight:700; letter-spacing:.16em; text-transform:uppercase; font-size:.72rem; color:var(--indigo); margin-bottom:.6rem; }
+.cba-family-bar .family-intro { margin:0; color:var(--ink-soft); font-size:.97rem; line-height:1.65; }
+.family-grid { display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:.75rem; max-width:1000px; margin:0 auto; }
+.family-door { display:flex; align-items:center; justify-content:center; gap:.55rem; padding:.85rem .7rem; min-height:56px; background:#fff; border:1px solid var(--line); border-radius:12px; text-align:center; font-size:.88rem; font-weight:600; color:var(--ink-soft); text-decoration:none; transition:border-color .18s ease, box-shadow .18s ease, transform .18s ease, color .18s ease; }
+.family-door .dot { width:.55rem; height:.55rem; flex:none; border-radius:50%; background:var(--c, var(--indigo)); }
+.family-door:hover, .family-door:focus-visible { color:var(--ink); border-color:var(--c, var(--indigo)); box-shadow:0 6px 18px -8px rgba(46,31,107,.28); transform:translateY(-2px); text-decoration:none; }
+.family-door.is-here { background:var(--soft2); border-color:var(--c, var(--indigo)); color:var(--ink); cursor:default; }
+@media (max-width:900px){ .family-grid { grid-template-columns:repeat(3, minmax(0,1fr)); } }
+@media (max-width:620px){ .family-grid { grid-template-columns:repeat(2, minmax(0,1fr)); gap:.6rem; } .family-door { font-size:.82rem; padding:.75rem .55rem; min-height:50px; } }
 .dot { width:8px; height:8px; border-radius:50%; background:var(--c); display:inline-block; flex-shrink:0; }
 
 /* ---------- footer ---------- */
@@ -271,6 +281,10 @@ section { scroll-margin-top:84px; }
 .legal-line span { max-width:88ch; }
 .legal-links a { color:#c9c3e4; }
 .legal-links a:hover { color:#fff; }
+/* Copyright — last line of every page. Left: © · Right: Soli Deo Gloria (CBA canonical split). */
+.copyright-line { display:flex; gap:8px 20px; flex-wrap:wrap; justify-content:space-between; align-items:center; }
+.copyright-line .soli { font-family:var(--font-serif); font-style:italic; color:#c9c3e4; }
+@media (max-width:560px){ .copyright-line { justify-content:center; text-align:center; } }
 @media (max-width:1000px){ .footer-inner { grid-template-columns:1fr 1fr 1fr; } }
 @media (max-width:660px){ .footer-inner { grid-template-columns:1fr 1fr; gap:26px; padding:38px 0 28px; } }
 

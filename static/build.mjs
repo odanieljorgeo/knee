@@ -12,7 +12,7 @@ import { DAYS, DAYS_COPY, QUIZ, QUIZ_COPY, CARDS_COPY, RESOURCES, LEGAL, TIMER }
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = join(ROOT, 'site');
-const V = '20260902a';
+const V = '20260902b';
 const YEAR = new Date().getFullYear();
 
 const esc = (s) => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -94,9 +94,20 @@ function header(lang, slug) {
 </div></header>`;
 }
 
+/* "Explore the family" — THE CANONICAL FAMILY GRID, ported from CBA Orlando.
+   Ten doors, fixed order, CURRENT site renders as span.is-here (no link). */
 function familyBar(lang) {
-  const links = S.FAMILY.map((f) => `<a href="${f.url}" rel="noopener"><i class="dot" style="--c:${f.dot}" aria-hidden="true"></i><span>${esc(f[lang])}</span></a>`).join('');
-  return `<nav class="cba-family-bar" aria-label="${esc(S.UI.familyEyebrow[lang])}"><span class="cba-family-eyebrow">${esc(S.UI.familyEyebrow[lang])}</span>${links}</nav>`;
+  const doors = S.FAMILY.map((f) => {
+    const here = f.id === S.FAMILY_CURRENT;
+    const cell = `<i class="dot" style="--c:${f.dot}" aria-hidden="true"></i><span class="family-door-name">${esc(f[lang])}</span>`;
+    return here
+      ? `<span class="family-door is-here" style="--c:${f.dot}">${cell}</span>`
+      : `<a class="family-door" href="${f.url}" rel="noopener" style="--c:${f.dot}">${cell}</a>`;
+  }).join('');
+  return `<section class="cba-family-bar" aria-label="${esc(S.UI.familyEyebrow[lang])}"><div class="section-inner family-wrap">` +
+    `<div class="family-head"><span class="cba-family-eyebrow">${esc(S.UI.familyEyebrow[lang])}</span>` +
+    `<p class="family-intro">${esc(S.FAMILY_INTRO[lang])}</p></div>` +
+    `<nav class="family-grid" aria-label="${esc(S.UI.familyEyebrow[lang])}">${doors}</nav></div></section>`;
 }
 
 function footer(lang) {
@@ -114,7 +125,8 @@ ${cols}
 </div>
 <div class="section-inner family-legal"><span>${esc(S.FAMILY_LEGAL[lang])}</span> &middot; <a href="tel:+13216892973">321-689-2973</a></div>
 <div class="section-inner legal-line"><span>${esc(S.INDEPENDENCE[lang])}</span><span class="legal-links">${legal}</span></div>
-<div class="section-inner legal-line"><span>&copy; ${YEAR} Knee Battle. ${esc(S.UI.colophon[lang])} CBA Orlando. ${esc(S.NON_AFFILIATION[lang])}</span></div>
+<div class="section-inner legal-line"><span>${esc(S.NON_AFFILIATION[lang])}</span></div>
+<div class="section-inner copyright-line"><span>&copy; ${YEAR} Knee Battle &middot; ${esc(S.UI.colophon[lang])} <strong>CBA Orlando</strong>.</span><span class="soli">Soli Deo Gloria</span></div>
 </footer>`;
 }
 
