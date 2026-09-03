@@ -35,7 +35,7 @@ export const FAMILY = [
   { id: 'sabbath', url: 'https://sabbathschool.us', dot: '#2f6bd7', en: 'Sabbath School', pt: 'Escola Sabatina', es: 'Escuela Sabática' },
   { id: 'committed', url: 'https://committedinchrist.com', dot: '#c2255c', en: 'Marriage Program', pt: 'Programa para Casais', es: 'Programa para Matrimonios' },
   { id: 'knee', url: 'https://kneebattle.com', dot: '#2E1F6B', en: 'Prayer Strategy', pt: 'Batalha de Joelhos', es: 'Batalla de Rodillas' },
-  { id: 'legado', url: 'https://meulegado.us', dot: '#8C5A2B', en: 'Legacy', pt: 'Legado', es: 'Legado' },
+  { id: 'legado', url: 'https://legacyofaman.com', dot: '#8C5A2B', en: 'Legacy', pt: 'Legado', es: 'Legado' },
 ];
 export const FAMILY_CURRENT = 'knee';
 
