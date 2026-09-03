@@ -109,9 +109,9 @@ export const CRISIS_STRIP = {
 };
 
 export const FAMILY_LEGAL = {
-  en: 'Part of the CBA Orlando family · Comunidade Brasileira Inc · Orlando, FL · info@cbaorlando.org',
-  pt: 'Parte da família CBA Orlando · Comunidade Brasileira Inc · Orlando, FL · info@cbaorlando.org',
-  es: 'Parte de la familia CBA Orlando · Comunidade Brasileira Inc · Orlando, FL · info@cbaorlando.org',
+  en: 'Comunidade Brasileira Inc is a registered 501(c)(3) nonprofit · Orlando, FL · (321) 689-2973 · info@cbaorlando.org',
+  pt: 'Comunidade Brasileira Inc é uma organização sem fins lucrativos registrada (501(c)(3)) · Orlando, FL · (321) 689-2973 · info@cbaorlando.org',
+  es: 'Comunidade Brasileira Inc es una organización sin fines de lucro registrada (501(c)(3)) · Orlando, FL · (321) 689-2973 · info@cbaorlando.org',
 };
 
 export const INDEPENDENCE = {
